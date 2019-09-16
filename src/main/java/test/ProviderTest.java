@@ -9,10 +9,9 @@ public class ProviderTest {
 
 	public static void main(String[] args) {
 
-		Provider[] providers = Security.getProviders("SecureRandom.SHA1PRNG");
-		
+		Provider[] providers = Security.getProviders();
 		for(Provider provider : providers) {
-			System.out.println(provider.getName() + " " + provider.getVersion());
+			System.out.println("---  " + provider.getName() + " " + provider.getVersion());
 			
 			Set<Service> services = provider.getServices();
 			
